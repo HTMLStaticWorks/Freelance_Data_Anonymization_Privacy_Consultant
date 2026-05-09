@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Dashboard | PrivacyIntel</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dark-mode">
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="index.html" class="sidebar-brand">
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+            </a>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" data-section="overview">
+                    <i class="bi bi-grid-1x2-fill"></i> Dashboard Overview
+                </a>
+                <a href="#" class="sidebar-link" data-section="upload">
+                    <i class="bi bi-cloud-arrow-up-fill"></i> Upload Datasets
+                </a>
+                <a href="#" class="sidebar-link" data-section="masking">
+                    <i class="bi bi-mask"></i> Masking Rules
+                </a>
+                <a href="#" class="sidebar-link" data-section="risk">
+                    <i class="bi bi-exclamation-triangle-fill"></i> Risk Analysis
+                </a>
+                <a href="#" class="sidebar-link" data-section="compliance">
+                    <i class="bi bi-file-earmark-check-fill"></i> Compliance Reports
+                </a>
+                <a href="#" class="sidebar-link" data-section="downloads">
+                    <i class="bi bi-download"></i> Downloads
+                </a>
+                <a href="#" class="sidebar-link" data-section="messages">
+                    <i class="bi bi-chat-dots-fill"></i> Messages
+                </a>
+                <a href="#" class="sidebar-link" data-section="settings">
+                    <i class="bi bi-gear-fill"></i> Settings
+                </a>
+            </nav>
+            <div class="mt-auto p-4">
+                <a href="login.html" class="btn btn-outline-danger w-100 btn-sm">Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="d-flex align-items-center">
+                    <button class="btn text-white d-lg-none me-3" id="sidebar-toggle">
+                        <i class="bi bi-list h3"></i>
+                    </button>
+                    <h4 class="mb-0">Privacy Intelligence Dashboard</h4>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-sm btn-outline-light" id="theme-toggle">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-light" id="rtl-toggle">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-light position-relative" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li><a class="dropdown-item small" href="#">New dataset validation complete</a></li>
+                            <li><a class="dropdown-item small" href="#">GDPR Audit report ready</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item small text-center" href="#">View All</a></li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=06b6d4&color=fff" class="rounded-circle" width="32" alt="Avatar">
+                        <span class="d-none d-md-inline small">John Doe</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 1. Dashboard Overview Section -->
+            <section id="overview" class="dashboard-section active p-0">
+                <div class="mb-4">
+                    <h2 class="fw-bold">Welcome back, <span class="text-info">John!</span></h2>
+                    <p class="text-muted">Your privacy intelligence platform is running at optimal security levels. Here is your current data overview.</p>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="glass-card p-3">
+                            <p class="text-muted small mb-1">Total Datasets</p>
+                            <h3 class="mb-0">42</h3>
+                            <span class="text-success small"><i class="bi bi-arrow-up"></i> 12% increase</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="glass-card p-3 border-danger">
+                            <p class="text-muted small mb-1">High Risk Fields</p>
+                            <h3 class="mb-0 text-danger">18</h3>
+                            <span class="text-muted small">Across 5 datasets</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="glass-card p-3 border-success">
+                            <p class="text-muted small mb-1">Compliance Score</p>
+                            <h3 class="mb-0 text-success">96%</h3>
+                            <span class="text-muted small">GDPR/CCPA Audit</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="glass-card p-3">
+                            <p class="text-muted small mb-1">Data Anonymized</p>
+                            <h3 class="mb-0">1.2 TB</h3>
+                            <span class="text-info small">This month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="glass-card mb-4">
+                            <h5>Compliance Overview</h5>
+                            <div class="mt-4" style="height: 200px; display: flex; align-items: flex-end; gap: 10px;">
+                                <div class="bg-info opacity-25 flex-grow-1" style="height: 40%;"></div>
+                                <div class="bg-info opacity-50 flex-grow-1" style="height: 70%;"></div>
+                                <div class="bg-info opacity-75 flex-grow-1" style="height: 50%;"></div>
+                                <div class="bg-info flex-grow-1" style="height: 90%;"></div>
+                                <div class="bg-info opacity-50 flex-grow-1" style="height: 60%;"></div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-2 text-muted small">
+                                <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="glass-card">
+                            <h5>Activity Timeline</h5>
+                            <ul class="list-unstyled mt-3 small">
+                                <li class="mb-3 border-start border-info ps-3">
+                                    <div class="fw-bold">Dataset "Customer_v2" masked</div>
+                                    <span class="text-muted">2 hours ago</span>
+                                </li>
+                                <li class="mb-3 border-start border-warning ps-3">
+                                    <div class="fw-bold">New risk rule added</div>
+                                    <span class="text-muted">5 hours ago</span>
+                                </li>
+                                <li class="mb-0 border-start border-success ps-3">
+                                    <div class="fw-bold">GDPR Audit Exported</div>
+                                    <span class="text-muted">Yesterday</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Upload Datasets Section -->
+            <section id="upload" class="dashboard-section p-0">
+                <div class="glass-card text-center py-5 border-dashed" style="border-style: dashed !important;">
+                    <i class="bi bi-cloud-upload display-3 text-info mb-3"></i>
+                    <h4>Drag & Drop Datasets</h4>
+                    <p class="text-muted">Supports CSV, JSON, Parquet, and SQL dumps (Max 500MB)</p>
+                    <button class="btn btn-premium btn-upload">Select Files</button>
+                    <div class="mt-4 mx-auto" style="max-width: 400px;">
+                        <div class="progress bg-dark" style="height: 10px;">
+                            <div class="progress-bar bg-info upload-progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h5>Recent Uploads</h5>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover mt-3">
+                            <thead>
+                                <tr>
+                                    <th>Filename</th>
+                                    <th>Size</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>users_export.csv</td>
+                                    <td>12.5 MB</td>
+                                    <td><span class="badge bg-success">Validated</span></td>
+                                    <td>2026-05-08</td>
+                                    <td><button class="btn btn-sm btn-outline-info">Manage</button></td>
+                                </tr>
+                                <tr>
+                                    <td>transactions.json</td>
+                                    <td>45.2 MB</td>
+                                    <td><span class="badge bg-warning text-dark">Scanning</span></td>
+                                    <td>2026-05-09</td>
+                                    <td><button class="btn btn-sm btn-outline-info">Manage</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Masking Rules Section -->
+            <section id="masking" class="dashboard-section p-0">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="glass-card">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5>Global Masking Rules</h5>
+                                <button class="btn btn-sm btn-info">+ Add Rule</button>
+                            </div>
+                            <div class="list-group list-group-flush bg-transparent">
+                                <div class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between align-items-center px-0">
+                                    <div>
+                                        <div class="fw-bold">Email Obfuscation</div>
+                                        <small class="text-muted">j***@example.com</small>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                                <div class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between align-items-center px-0">
+                                    <div>
+                                        <div class="fw-bold">Phone Number Masking</div>
+                                        <small class="text-muted">+1 ***-***-1234</small>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                                <div class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between align-items-center px-0">
+                                    <div>
+                                        <div class="fw-bold">Credit Card Encryption</div>
+                                        <small class="text-muted">AES-256 Hashing</small>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="glass-card">
+                            <h5>Rule Preview</h5>
+                            <p class="text-muted small">How your data looks after applying active rules:</p>
+                            <pre class="bg-dark p-3 rounded text-info small">
+{
+  "id": 1024,
+  "name": "J*** D***",
+  "email": "j***@p****.com",
+  "phone": "+1-***-***-8822",
+  "salary": "$5*,***"
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Risk Analysis Section -->
+            <section id="risk" class="dashboard-section p-0">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="glass-card h-100">
+                            <h5>Re-identification Risk Score</h5>
+                            <div class="text-center py-4">
+                                <div class="display-1 text-warning">Low</div>
+                                <p class="text-muted">Overall Risk Index: 12.4%</p>
+                            </div>
+                            <hr class="border-secondary">
+                            <div class="small">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Quasi-identifier Linkability</span>
+                                    <span class="text-success">Good</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Demographic Uniqueness</span>
+                                    <span class="text-warning">Moderate</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>Cross-dataset Correlation</span>
+                                    <span class="text-success">Safe</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="glass-card h-100">
+                            <h5>Sensitivity Matrix</h5>
+                            <div class="p-3">
+                                <div class="row g-2">
+                                    <div class="col-3"><div class="bg-danger rounded p-3 text-center small">H</div></div>
+                                    <div class="col-3"><div class="bg-danger opacity-75 rounded p-3 text-center small">H</div></div>
+                                    <div class="col-3"><div class="bg-warning rounded p-3 text-center small">M</div></div>
+                                    <div class="col-3"><div class="bg-success rounded p-3 text-center small">L</div></div>
+                                    
+                                    <div class="col-3"><div class="bg-danger opacity-75 rounded p-3 text-center small">H</div></div>
+                                    <div class="col-3"><div class="bg-warning rounded p-3 text-center small">M</div></div>
+                                    <div class="col-3"><div class="bg-success rounded p-3 text-center small">L</div></div>
+                                    <div class="col-3"><div class="bg-success rounded p-3 text-center small">L</div></div>
+                                </div>
+                                <p class="text-muted small mt-3">Distribution of sensitive fields across clusters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Compliance Reports Section -->
+            <section id="compliance" class="dashboard-section p-0">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="glass-card text-center">
+                            <i class="bi bi-file-earmark-pdf display-4 text-danger mb-3"></i>
+                            <h5>GDPR Audit Report</h5>
+                            <p class="text-muted small">Generated on 2026-05-01</p>
+                            <button class="btn btn-outline-light btn-sm">Download PDF</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-card text-center">
+                            <i class="bi bi-file-earmark-pdf display-4 text-info mb-3"></i>
+                            <h5>CCPA Compliance</h5>
+                            <p class="text-muted small">Generated on 2026-04-25</p>
+                            <button class="btn btn-outline-light btn-sm">Download PDF</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-card text-center border-info">
+                            <i class="bi bi-plus-circle display-4 text-info mb-3"></i>
+                            <h5>New Report</h5>
+                            <p class="text-muted small">Custom Audit Builder</p>
+                            <button class="btn btn-premium btn-sm">Generate</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Downloads Section -->
+            <section id="downloads" class="dashboard-section p-0">
+                <div class="glass-card">
+                    <h5>Exported Files</h5>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover mt-3">
+                            <thead>
+                                <tr>
+                                    <th>File Name</th>
+                                    <th>Format</th>
+                                    <th>Expires</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>anonymized_leads_2026.zip</td>
+                                    <td>ZIP</td>
+                                    <td>48h</td>
+                                    <td><button class="btn btn-sm btn-info">Download</button></td>
+                                </tr>
+                                <tr>
+                                    <td>risk_analysis_summary.pdf</td>
+                                    <td>PDF</td>
+                                    <td>7d</td>
+                                    <td><button class="btn btn-sm btn-info">Download</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Messages Section -->
+            <section id="messages" class="dashboard-section p-0">
+                <div class="glass-card p-0 overflow-hidden chat-container">
+                    <div class="row g-0 h-100">
+                        <!-- Contacts Sidebar -->
+                        <div class="col-md-4 border-end border-secondary d-flex flex-column h-100">
+                            <div class="p-3 border-bottom border-secondary bg-glass-light">
+                                <h5 class="mb-0">Messages</h5>
+                            </div>
+                            <div class="flex-grow-1 overflow-y-auto">
+                                <div class="p-3 chat-contact active d-flex align-items-center gap-3">
+                                    <div class="position-relative">
+                                        <img src="https://ui-avatars.com/api/?name=Audit+Team&background=06b6d4&color=fff" class="rounded-circle" width="45">
+                                        <span class="position-absolute bottom-0 end-0 p-1 bg-success border border-light rounded-circle"></span>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold text-info">Internal Audit Team</div>
+                                        <div class="text-muted small text-truncate" style="max-width: 150px;">Report needs review...</div>
+                                    </div>
+                                </div>
+                                <div class="p-3 chat-contact d-flex align-items-center gap-3">
+                                    <div class="position-relative">
+                                        <img src="https://ui-avatars.com/api/?name=Legal+Dept&background=a855f7&color=fff" class="rounded-circle" width="45">
+                                        <span class="position-absolute bottom-0 end-0 p-1 bg-secondary border border-light rounded-circle"></span>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold">Legal Department</div>
+                                        <div class="text-muted small text-truncate" style="max-width: 150px;">CCPA checklist update</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Window -->
+                        <div class="col-md-8 d-flex flex-column h-100">
+                            <!-- Chat Header -->
+                            <div class="p-3 border-bottom border-secondary chat-header d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="https://ui-avatars.com/api/?name=Audit+Team&background=06b6d4&color=fff" class="rounded-circle" width="40">
+                                    <div>
+                                        <div class="fw-bold mb-0">Internal Audit Team</div>
+                                        <small class="text-success">Online</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-light"><i class="bi bi-telephone"></i></button>
+                                    <button class="btn btn-sm btn-outline-light"><i class="bi bi-camera-video"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Messages Content -->
+                            <div class="flex-grow-1 p-4 overflow-y-auto" style="background: rgba(0,0,0,0.1);">
+                                <div class="d-flex flex-column">
+                                    <div class="message-bubble message-received">
+                                        Has the CCPA dataset been masked? We need to finalize the audit by EOD.
+                                        <div class="text-end mt-1"><small class="opacity-50" style="font-size: 10px;">10:24 AM</small></div>
+                                    </div>
+                                    
+                                    <div class="message-bubble message-sent">
+                                        Yes, processing is at 100%. Validation is currently pending.
+                                        <div class="text-end mt-1"><small class="opacity-50" style="font-size: 10px;">10:26 AM</small></div>
+                                    </div>
+
+                                    <div class="message-bubble message-received">
+                                        Excellent. Please send over the differential privacy logs once validation is complete.
+                                        <div class="text-end mt-1"><small class="opacity-50" style="font-size: 10px;">10:30 AM</small></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chat Input -->
+                            <div class="p-3 border-top border-secondary chat-header">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary"><i class="bi bi-paperclip"></i></button>
+                                    <input type="text" class="form-control bg-dark border-secondary text-white mx-2" placeholder="Write a message...">
+                                    <button class="btn btn-premium px-4"><i class="bi bi-send-fill"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Settings Section -->
+            <section id="settings" class="dashboard-section p-0">
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <div class="glass-card">
+                            <h5 class="mb-4">Profile Settings</h5>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small text-muted">Full Name</label>
+                                        <input type="text" class="form-control bg-dark border-secondary text-white" value="John Doe">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small text-muted">Email</label>
+                                        <input type="email" class="form-control bg-dark border-secondary text-white" value="john@enterprise.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small text-muted">Organization</label>
+                                        <input type="text" class="form-control bg-dark border-secondary text-white" value="PrivacyIntel Global">
+                                    </div>
+                                </div>
+                                <button class="btn btn-premium mt-4">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-card">
+                            <h5 class="mb-4">Security</h5>
+                            <div class="mb-3 d-flex justify-content-between align-items-center">
+                                <span>Two-Factor Auth</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-between align-items-center">
+                                <span>Auto-Lock Session</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+                            <hr class="border-secondary">
+                            <button class="btn btn-sm btn-outline-danger w-100">Reset API Keys</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | PrivacyIntel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                    <a href="dashboard.html" class="nav-dashboard-dot" title="Dashboard">D</a>
+                    <button class="btn btn-sm btn-outline-light" id="theme-toggle">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-light" id="rtl-toggle">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-premium btn-sm">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200" alt="Data Anonymization" class="img-fluid rounded-4 mb-5 shadow-lg">
+                    <h2 class="mb-4">Advanced Data Anonymization</h2>
+                    <p class="text-muted mb-4">Our approach to data anonymization combines industry-standard masking with cutting-edge differential privacy models. We ensure that your datasets remain useful for analytics while providing mathematically provable privacy guarantees.</p>
+                    
+                    <h4 class="mb-3">Workflow Explanation</h4>
+                    <div class="glass-card mb-4">
+                        <ol class="mb-0">
+                            <li class="mb-3"><strong>Data Profiling:</strong> We analyze the structure and sensitivity of your fields.</li>
+                            <li class="mb-3"><strong>Risk Modeling:</strong> Identifying potential re-identification attacks (linkage, skewness).</li>
+                            <li><strong>Transformation:</strong> Applying the optimal mix of K-anonymity, L-diversity, and T-closeness.</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="mb-3">Compliance Checklist</h4>
+                    <div class="row g-3 mb-5">
+                        <div class="col-md-6">
+                            <div class="glass-card p-3 d-flex align-items-center">
+                                <i class="bi bi-check2-circle text-success me-3 h4 mb-0"></i>
+                                <span>Article 29 WP Certified</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="glass-card p-3 d-flex align-items-center">
+                                <i class="bi bi-check2-circle text-success me-3 h4 mb-0"></i>
+                                <span>ISO 27701 Aligned</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3">Frequently Asked Questions</h4>
+                    <div class="accordion accordion-flush bg-transparent" id="faqAccordion">
+                        <div class="accordion-item bg-transparent text-white border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Does anonymization affect data accuracy?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    We use utility-preserving algorithms that minimize information loss while maximizing privacy protection.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="glass-card mb-4">
+                        <h4 class="mb-4">Consultation Pricing</h4>
+                        <div class="mb-4">
+                            <h2 class="text-info">$2,500 <span class="fs-6 text-muted">/ project</span></h2>
+                        </div>
+                        <ul class="list-unstyled mb-4 small text-muted">
+                            <li class="mb-2"><i class="bi bi-check text-info me-2"></i> Single Dataset Analysis</li>
+                            <li class="mb-2"><i class="bi bi-check text-info me-2"></i> Risk Assessment Report</li>
+                            <li class="mb-2"><i class="bi bi-check text-info me-2"></i> Implementation Roadmap</li>
+                        </ul>
+                        <button class="btn btn-premium w-100">Get Started</button>
+                    </div>
+
+                    <div class="glass-card">
+                        <h5>Need Help?</h5>
+                        <p class="small text-muted">Talk to a privacy engineer today about your specific use case.</p>
+                        <a href="contact.html" class="btn btn-outline-info w-100 btn-sm">Contact Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand mb-3 d-block" href="#">
+                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                    </a>
+                    <p class="text-muted">Empowering enterprises with cutting-edge data anonymization and privacy compliance solutions.</p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                       
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="index.html" class="text-decoration-none text-muted mb-2 d-block">Home</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-muted mb-2 d-block">About Us</a></li>
+                        <li><a href="services.html" class="text-decoration-none text-muted mb-2 d-block">Services</a></li>
+                        <li><a href="portfolio.html" class="text-decoration-none text-muted mb-2 d-block">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Legal</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="text-decoration-none text-muted mb-2 d-block">Privacy Policy</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted mb-2 d-block">Terms of Service</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted mb-2 d-block">Cookie Policy</a></li>
+                        <li><a href="compliance.html" class="text-decoration-none text-muted mb-2 d-block">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted small">Stay updated with the latest in privacy engineering.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <button class="btn btn-premium" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 text-center text-muted small">
+                <p>&copy; 2026 PrivacyIntel. All rights reserved. Designed for Enterprise Security.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
