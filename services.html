@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="dark-mode">
+<body class="dark-mode services-page">
 
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,6 @@
                     <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -45,7 +44,7 @@
         </div>
     </nav>
 
-    <section class="py-5 mt-5">
+    <section class="services-hero py-5 mt-5">
         <div class="container text-center py-5">
             <h1 class="display-4">Privacy Intelligence <span class="text-info">Services</span></h1>
             <p class="text-muted mx-auto" style="max-width: 600px;">Comprehensive solutions for data anonymization, risk analysis, and global compliance engineering.</p>
@@ -55,52 +54,150 @@
     <section class="pt-0">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <i class="bi bi-shuffle h1 text-info mb-4 d-block"></i>
-                        <h4>Data Anonymization</h4>
-                        <p class="text-muted mb-4">Advanced masking and differential privacy techniques to secure sensitive datasets for sharing.</p>
-                        <a href="service-details.html" class="btn btn-sm btn-outline-info">Learn More</a>
+                <div class="col-lg-4 col-md-6 reveal reveal-up">
+                    <div class="glass-card h-100 p-0 overflow-hidden hover-lift">
+                        <img src="assets/images/s-anon.png" class="w-100 service-card-img" alt="Data Anonymization">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Data Anonymization</h4>
+                            <p class="text-muted small mb-4">Advanced masking and differential privacy techniques to secure sensitive datasets for sharing.</p>
+                            <a href="service-details.html" class="btn btn-sm btn-outline-info w-100">Explore Service</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <i class="bi bi-file-earmark-check h1 text-info mb-4 d-block"></i>
-                        <h4>GDPR Consulting</h4>
-                        <p class="text-muted mb-4">End-to-end guidance on meeting European data protection standards and avoiding heavy fines.</p>
-                        <a href="service-details.html" class="btn btn-sm btn-outline-info">Learn More</a>
+                <div class="col-lg-4 col-md-6 reveal reveal-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card h-100 p-0 overflow-hidden hover-lift">
+                        <img src="assets/images/s-gdpr.png" class="w-100 service-card-img" alt="GDPR Consulting">
+                        <div class="p-4">
+                            <h4 class="fw-bold">GDPR Consulting</h4>
+                            <p class="text-muted small mb-4">End-to-end guidance on meeting European data protection standards and avoiding heavy fines.</p>
+                            <a href="service-details.html" class="btn btn-sm btn-outline-info w-100">Explore Service</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <i class="bi bi-shield-check h1 text-info mb-4 d-block"></i>
-                        <h4>CCPA Compliance</h4>
-                        <p class="text-muted mb-4">Tailored workflows for California's privacy laws, ensuring consumer data rights are respected.</p>
-                        <a href="service-details.html" class="btn btn-sm btn-outline-info">Learn More</a>
+                <div class="col-lg-4 col-md-6 reveal reveal-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card h-100 p-0 overflow-hidden hover-lift">
+                        <img src="assets/images/s-ccpa.png" class="w-100 service-card-img" alt="CCPA Compliance">
+                        <div class="p-4">
+                            <h4 class="fw-bold">CCPA Compliance</h4>
+                            <p class="text-muted small mb-4">Tailored workflows for California's privacy laws, ensuring consumer data rights are respected.</p>
+                            <a href="service-details.html" class="btn btn-sm btn-outline-info w-100">Explore Service</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <i class="bi bi-search h1 text-info mb-4 d-block"></i>
-                        <h4>Risk Analysis</h4>
-                        <p class="text-muted mb-4">Mathematical modeling of re-identification risks in complex, multi-source datasets.</p>
-                        <a href="service-details.html" class="btn btn-sm btn-outline-info">Learn More</a>
+                <div class="col-lg-4 col-md-6 reveal reveal-up" style="transition-delay: 0.3s;">
+                    <div class="glass-card h-100 p-0 overflow-hidden hover-lift">
+                        <img src="assets/images/s-risk.png" class="w-100 service-card-img" alt="Risk Analysis">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Risk Analysis</h4>
+                            <p class="text-muted small mb-4">Mathematical modeling of re-identification risks in complex, multi-source datasets.</p>
+                            <a href="service-details.html" class="btn btn-sm btn-outline-info w-100">Explore Service</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <i class="bi bi-clipboard-pulse h1 text-info mb-4 d-block"></i>
-                        <h4>Privacy Auditing</h4>
-                        <p class="text-muted mb-4">Regular health checks of your data infrastructure to identify and patch privacy gaps.</p>
-                        <a href="service-details.html" class="btn btn-sm btn-outline-info">Learn More</a>
+                <div class="col-lg-4 col-md-6 reveal reveal-up" style="transition-delay: 0.4s;">
+                    <div class="glass-card h-100 p-0 overflow-hidden hover-lift">
+                        <img src="assets/images/s-auditing.png" class="w-100 service-card-img" alt="Privacy Auditing">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Privacy Auditing</h4>
+                            <p class="text-muted small mb-4">Regular health checks of your data infrastructure to identify and patch privacy gaps.</p>
+                            <a href="service-details.html" class="btn btn-sm btn-outline-info w-100">Explore Service</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="glass-card h-100">
-                        <i class="bi bi-cpu h1 text-info mb-4 d-block"></i>
-                        <h4>Secure Processing</h4>
-                        <p class="text-muted mb-4">Enabling analytics on encrypted data using homomorphic encryption and secure enclaves.</p>
-                        <a href="service-details.html" class="btn btn-sm btn-outline-info">Learn More</a>
+                <div class="col-lg-4 col-md-6 reveal reveal-up" style="transition-delay: 0.5s;">
+                    <div class="glass-card h-100 p-0 overflow-hidden hover-lift">
+                        <img src="assets/images/v2-vault.png" class="w-100 service-card-img" alt="Secure Processing">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Secure Processing</h4>
+                            <p class="text-muted small mb-4">Enabling analytics on encrypted data using homomorphic encryption and secure enclaves.</p>
+                            <a href="service-details.html" class="btn btn-sm btn-outline-info w-100">Explore Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Security-Focused Portfolio (Split Layout) -->
+    <section class="py-10">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal reveal-left">
+                    <h2 class="display-5 fw-bold mb-4">Security-Focused <span class="text-info">Portfolio</span></h2>
+                    <p class="text-muted lead mb-4">We have delivered state-of-the-art privacy implementations for Fortune 500 companies, ensuring data safety across diverse cloud environments.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span class="small">15+ FinTech Deployments</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3">
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                                <span class="small">Healthcare Data Vaults</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 reveal reveal-right">
+                    <div class="position-relative ps-lg-5">
+                        <img src="assets/images/s-portfolio.png" alt="Portfolio" class="img-fluid rounded-4 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. GDPR/CCPA Expertise (Feature Layout) -->
+    <section class="bg-secondary-bg py-10">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 mt-5 mt-lg-0 reveal reveal-left">
+                    <div class="position-relative">
+                        <img src="assets/images/s-legal.png" alt="Expertise" class="img-fluid rounded-4 shadow-2xl scale-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5 reveal reveal-right">
+                    <h2 class="display-5 fw-bold mb-4">Regulatory <span class="gradient-text">Expertise</span></h2>
+                    <p class="text-muted mb-5">Our legal engineering team specializes in the intersection of code and compliance, ensuring that GDPR, CCPA, and HIPPA requirements are mathematically verified.</p>
+                    <div class="glass-card p-4 border-start border-info border-4">
+                        <h6 class="fw-bold mb-3">Compliance Mastery</h6>
+                        <p class="small text-muted mb-0">From Subject Access Requests (SARs) to Data Protection Impact Assessments (DPIAs), we automate the hardest parts of compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Risk Assessment Methodology (Diagram Layout) -->
+    <section class="py-10">
+        <div class="container">
+            <div class="text-center mb-5 reveal reveal-up">
+                <h2 class="display-5 fw-bold">Risk Assessment <span class="text-info">Methodology</span></h2>
+                <p class="text-muted">A systematic approach to quantifying and mitigating re-identification risks.</p>
+            </div>
+            <div class="glass-card p-0 rounded-5 overflow-hidden border-0 shadow-2xl reveal reveal-scale">
+                <div class="row g-0">
+                    <div class="col-lg-8">
+                        <img src="assets/images/s-method.png" alt="Methodology" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-4 p-5 d-flex flex-column justify-content-center">
+                        <div class="mb-4">
+                            <span class="badge bg-info text-dark mb-2">Step 01</span>
+                            <h5 class="fw-bold">Data Profiling</h5>
+                            <p class="small text-muted">Identifying quasi-identifiers and sensitive attributes.</p>
+                        </div>
+                        <div class="mb-4">
+                            <span class="badge bg-primary text-white mb-2">Step 02</span>
+                            <h5 class="fw-bold">Risk Measurement</h5>
+                            <p class="small text-muted">Calculating k-anonymity and l-diversity scores.</p>
+                        </div>
+                        <div class="mb-0">
+                            <span class="badge bg-success text-white mb-2">Step 03</span>
+                            <h5 class="fw-bold">Transformation</h5>
+                            <p class="small text-muted">Applying optimal suppression and generalization.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,12 +209,12 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <a class="navbar-brand mb-3 d-block" href="#">
-                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
                     </a>
                     <p class="text-muted">Empowering enterprises with cutting-edge data anonymization and privacy compliance solutions.</p>
                     <div class="d-flex gap-2 mt-4">
                         <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-github"></i></a>

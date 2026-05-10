@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="dark-mode">
+<body class="dark-mode pricing-page">
 
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,6 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -45,7 +44,7 @@
         </div>
     </nav>
 
-    <section class="mt-5 py-5 text-center">
+    <section class="pricing-hero mt-5 py-5 text-center">
         <div class="container">
             <h1 class="display-4">Enterprise <span class="text-info">Pricing</span></h1>
             <p class="text-muted mx-auto mb-5" style="max-width: 600px;">Scalable privacy solutions for every stage of your data journey.</p>
@@ -98,12 +97,126 @@
         </div>
     </section>
 
+    <!-- 1. Privacy ROI Calculator (Interactive-style Layout) -->
+    <section class="py-10 bg-secondary-bg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal reveal-left">
+                    <h2 class="display-5 fw-bold mb-4">Calculate Your <span class="text-info">Privacy ROI</span></h2>
+                    <p class="text-muted mb-5">Investing in privacy engineering isn't just about compliance—it's a massive cost-saving strategy. Avoid fines and build customer trust.</p>
+                    
+                    <div class="glass-card p-5 border-0 shadow-2xl">
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold">Annual Data Volume (TB)</label>
+                            <input type="range" class="form-range" min="1" max="100" value="50">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold">User Records (Millions)</label>
+                            <input type="range" class="form-range" min="1" max="50" value="10">
+                        </div>
+                        <hr class="border-secondary my-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">Potential Fine Savings:</span>
+                            <span class="h3 fw-bold text-info mb-0">$2.4M+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 reveal reveal-right">
+                    <div class="position-relative ps-lg-5">
+                        <img src="assets/images/v2-risk.png" alt="ROI Analysis" class="img-fluid rounded-4 shadow-2xl">
+                        <div class="glass-card position-absolute bottom-0 start-0 p-3 m-4 floating-card d-none d-xl-block">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-graph-up-arrow text-success h4 mb-0"></i>
+                                <div>
+                                    <div class="smaller fw-bold">Risk Reduction</div>
+                                    <div class="h5 fw-bold mb-0">85% YoY</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Flexible Deployment Models (Feature Layout) -->
+    <section class="py-10">
+        <div class="container">
+            <div class="text-center mb-5 reveal reveal-up">
+                <h2 class="display-5 fw-bold">Flexible <span class="text-info">Deployment</span></h2>
+                <p class="text-muted">Choose the infrastructure that matches your security protocols.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 reveal reveal-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card h-100 text-center p-5 hover-lift">
+                        <div class="bg-info bg-opacity-10 p-4 rounded-circle d-inline-block mb-4">
+                            <i class="bi bi-cloud-check h1 text-info mb-0"></i>
+                        </div>
+                        <h4 class="fw-bold">SaaS Cloud</h4>
+                        <p class="small text-muted">Fully managed, instant setup, and automatic updates in our secure cloud environment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal reveal-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card h-100 text-center p-5 hover-lift border-info">
+                        <div class="bg-primary bg-opacity-10 p-4 rounded-circle d-inline-block mb-4">
+                            <i class="bi bi-building-lock h1 text-primary mb-0"></i>
+                        </div>
+                        <h4 class="fw-bold">On-Premise</h4>
+                        <p class="small text-muted">Full control over your data. Deploy our engine inside your own air-gapped data centers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal reveal-up" style="transition-delay: 0.3s;">
+                    <div class="glass-card h-100 text-center p-5 hover-lift">
+                        <div class="bg-success bg-opacity-10 p-4 rounded-circle d-inline-block mb-4">
+                            <i class="bi bi-cpu h1 text-success mb-0"></i>
+                        </div>
+                        <h4 class="fw-bold">Hybrid Mesh</h4>
+                        <p class="small text-muted">Process sensitive data locally and sync anonymized insights to your global cloud providers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Dedicated Compliance Support (Featured Layout) -->
+    <section class="py-10 bg-secondary-bg">
+        <div class="container">
+            <div class="glass-card p-0 rounded-5 overflow-hidden border-0 shadow-2xl reveal reveal-scale">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6">
+                        <img src="assets/images/about-leadership.png" alt="Compliance Experts" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-6 p-5">
+                        <h2 class="display-6 fw-bold mb-4">Expert <span class="text-info">Compliance</span> Support</h2>
+                        <p class="text-muted mb-4">Our Professional and Enterprise plans include direct access to our legal engineering team. We don't just provide tools; we provide the expertise to defend your choices during an audit.</p>
+                        
+                        <div class="d-flex flex-column gap-3 mb-5">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-patch-check-fill text-info h5 mb-0"></i>
+                                <span class="fw-bold">Legal Response Team (24/7)</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-patch-check-fill text-info h5 mb-0"></i>
+                                <span class="fw-bold">Custom Policy Engineering</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-patch-check-fill text-info h5 mb-0"></i>
+                                <span class="fw-bold">Quarterly Risk Audits</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-premium w-100">Schedule Expert Consultation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <a class="navbar-brand mb-3 d-block" href="#">
-                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
                     </a>
                     <p class="text-muted">Empowering enterprises with cutting-edge data anonymization and privacy compliance solutions.</p>
                     <div class="d-flex gap-2 mt-4">

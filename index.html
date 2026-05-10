@@ -19,10 +19,10 @@
 <body class="dark-mode">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,6 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -149,7 +148,7 @@
                 <div class="col-md-3 stagger-item">
                     <div class="glass-card h-100 p-0 overflow-hidden workflow-card">
                         <div class="workflow-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Audit" class="w-100 h-100 object-fit-cover">
+                            <img src="assets/images/workflow-audit-new.png" alt="Audit" class="w-100 h-100 object-fit-cover">
                         </div>
                         <div class="p-4 text-center">
                             <div class="h2 text-info mb-3 fw-bold">04</div>
@@ -183,35 +182,35 @@
     </section>
 
     <!-- 3. Data Masking Visualization -->
-    <section>
+    <section class="masking-section overflow-hidden">
         <div class="container text-center">
             <h2 class="mb-5 reveal reveal-up">Data Masking Techniques</h2>
             <div class="row g-4 stagger-container">
-                <div class="col-md-4 stagger-item">
-                    <div class="glass-card text-start h-100">
+                <div class="col-md-4 reveal reveal-scale">
+                    <div class="glass-card text-start h-100 scanning-card">
                         <h4 class="text-info">Pseudonymization</h4>
                         <p class="small text-muted">Replacing identifiers with artificial ones to reduce linkability.</p>
-                        <div class="bg-dark p-3 rounded font-monospace small mt-3">
+                        <div class="masking-code-block p-3 rounded font-monospace small mt-3">
                             Name: John Doe <br>
                             ID: <span class="text-info">#8X9-K2L</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 stagger-item">
-                    <div class="glass-card text-start border-info h-100">
+                <div class="col-md-4 reveal reveal-scale" style="transition-delay: 0.2s;">
+                    <div class="glass-card text-start border-info h-100 scanning-card">
                         <h4 class="text-info">Generalization</h4>
                         <p class="small text-muted">Reducing granularity of data (e.g., specific age to age ranges).</p>
-                        <div class="bg-dark p-3 rounded font-monospace small mt-3">
+                        <div class="masking-code-block p-3 rounded font-monospace small mt-3">
                             Age: 25 <br>
                             Range: <span class="text-info">20-30</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 stagger-item">
-                    <div class="glass-card text-start h-100">
+                <div class="col-md-4 reveal reveal-scale" style="transition-delay: 0.4s;">
+                    <div class="glass-card text-start h-100 scanning-card">
                         <h4 class="text-info">Perturbation</h4>
                         <p class="small text-muted">Adding small amounts of noise to numerical values.</p>
-                        <div class="bg-dark p-3 rounded font-monospace small mt-3">
+                        <div class="masking-code-block p-3 rounded font-monospace small mt-3">
                             Salary: $50,000 <br>
                             Value: <span class="text-info">$49,982</span>
                         </div>
@@ -260,28 +259,173 @@
         </div>
     </section>
 
-    <!-- 5. Client Success -->
+
+    <!-- Unique Section 1: Global Compliance Parallax -->
+    <section class="compliance-parallax-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal reveal-left">
+                    <h2 class="display-5 mb-4 fw-bold">Multi-Jurisdictional <br><span class="gradient-text">Compliance Frameworks</span></h2>
+                    <p class="lead text-muted mb-4">Navigating the intersection of GDPR, CCPA, and LGPD with precision and automated intelligence.</p>
+                    
+                    <div class="compliance-item">
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-shield-check text-info fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold">Automated Data Mapping</h5>
+                                <p class="small text-muted mb-0">Real-time discovery and classification of sensitive PII across cloud environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="compliance-item">
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-file-earmark-lock text-info fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold">Dynamic Policy Enforcement</h5>
+                                <p class="small text-muted mb-0">Apply privacy rules automatically based on user jurisdiction and data sensitivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="compliance-item">
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-graph-up-arrow text-info fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold">Audit-Ready Reporting</h5>
+                                <p class="small text-muted mb-0">Generate comprehensive compliance logs for regulatory inspections in minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal reveal-right mt-5 mt-lg-0">
+                    <div class="parallax-img-container shadow-2xl">
+                        <img src="assets/images/compliance-main-new.png" alt="Compliance Visualization">
+                        <div class="hero-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Section 2: Advanced Risk Methodology -->
+    <section>
+        <div class="container">
+            <div class="text-center mb-5 reveal reveal-up">
+                <h2 class="display-5 fw-bold">Risk Assessment <span class="gradient-text">Methodology</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Our proprietary mathematical models provide quantifiable security for every data point.</p>
+            </div>
+            <div class="row g-4 risk-card-container">
+                <div class="col-md-4 reveal reveal-up" style="transition-delay: 0.1s;">
+                    <div class="risk-flip-card">
+                        <div class="risk-card-front">
+                            <img src="assets/images/risk-k-anon.png" alt="K-Anonymity" class="img-fluid rounded-3 mb-3" style="max-height: 100px;">
+                            <h4>K-Anonymity</h4>
+                            <p class="text-muted text-center small">Ensuring each individual is hidden within a group of 'k' others.</p>
+                        </div>
+                        <div class="risk-card-back">
+                            <h4>The Formula</h4>
+                            <p class="text-center">Minimizing re-identification risk by ensuring quasi-identifiers are shared by at least k individuals.</p>
+                            <div class="badge bg-white text-dark mt-3">Enterprise Standard</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal reveal-up" style="transition-delay: 0.2s;">
+                    <div class="risk-flip-card">
+                        <div class="risk-card-front">
+                            <img src="assets/images/risk-l-div.png" alt="L-Diversity" class="img-fluid rounded-3 mb-3" style="max-height: 100px;">
+                            <h4>L-Diversity</h4>
+                            <p class="text-muted text-center small">Protecting sensitive attributes within anonymous clusters.</p>
+                        </div>
+                        <div class="risk-card-back">
+                            <h4>Data Variety</h4>
+                            <p class="text-center">Extending k-anonymity by ensuring sensitive fields have enough variety to prevent inference.</p>
+                            <div class="badge bg-white text-dark mt-3">High Protection</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal reveal-up" style="transition-delay: 0.3s;">
+                    <div class="risk-flip-card">
+                        <div class="risk-card-front">
+                            <img src="assets/images/risk-t-close.png" alt="T-Closeness" class="img-fluid rounded-3 mb-3" style="max-height: 100px;">
+                            <h4>T-Closeness</h4>
+                            <p class="text-muted text-center small">Balancing data utility with rigorous privacy distributions.</p>
+                        </div>
+                        <div class="risk-card-back">
+                            <h4>Statistical Guard</h4>
+                            <p class="text-center">Matching the distribution of sensitive data in clusters to the overall population.</p>
+                            <div class="badge bg-white text-dark mt-3">Advanced Level</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Section 3: Privacy Engineering Portfolio Bento -->
+    <section class="bg-secondary-bg">
+        <div class="container">
+            <div class="row mb-5 align-items-end reveal reveal-up">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold">Security-Focused <br><span class="gradient-text">Portfolio Results</span></h2>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p class="text-muted">Explore how we've secured data for global enterprises across various industries.</p>
+                </div>
+            </div>
+            <div class="bento-grid reveal reveal-scale">
+                <div class="bento-item bento-1">
+                    <img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&q=80&w=1200" alt="Finance">
+                    <h3 class="fw-bold">Financial Services</h3>
+                    <p class="mb-0">99.9% anonymization accuracy for transaction datasets.</p>
+                    <a href="portfolio.html" class="btn btn-sm btn-premium mt-3 w-fit-content">View Case Study</a>
+                </div>
+                <div class="bento-item bento-2">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200" alt="Healthcare">
+                    <h4 class="fw-bold">Healthcare Systems</h4>
+                    <p class="small mb-0">Securing 2M+ patient records with differential privacy.</p>
+                </div>
+                <div class="bento-item bento-3">
+                    <h4 class="fw-bold">Retail Analytics</h4>
+                    <p class="small mb-0">CCPA compliant user behavior tracking.</p>
+                    <i class="bi bi-cart-check text-info fs-2 mt-auto"></i>
+                </div>
+                <div class="bento-item bento-4">
+                    <h4 class="fw-bold">Cloud SaaS</h4>
+                    <p class="small mb-0">Multi-tenant data isolation and encryption.</p>
+                    <i class="bi bi-cloud-haze2 text-info fs-2 mt-auto"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section>
         <div class="container">
             <h2 class="text-center mb-5 reveal reveal-up">Enterprise Client Success</h2>
             <div class="row g-4 reveal reveal-scale">
                 <div class="col-md-4">
                     <div class="glass-card text-center h-100">
-                        <div class="mb-3 text-info"><i class="bi bi-bank h1"></i></div>
+                        <div class="client-img-wrapper">
+                            <img src="assets/images/client-fintech.png" alt="FinTech Corp" class="client-img">
+                        </div>
                         <h4>FinTech Corp</h4>
                         <p class="text-muted">Reduced data sharing risk by 95% while maintaining model accuracy for credit scoring.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card text-center h-100">
-                        <div class="mb-3 text-info"><i class="bi bi-hospital h1"></i></div>
+                        <div class="client-img-wrapper">
+                            <img src="assets/images/client-healthcare.png" alt="HealthBridge" class="client-img">
+                        </div>
                         <h4>HealthBridge</h4>
                         <p class="text-muted">HIPAA-compliant anonymization for 2M+ patient records for medical research.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card text-center h-100">
-                        <div class="mb-3 text-info"><i class="bi bi-cart4 h1"></i></div>
+                        <div class="client-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&q=80&w=800" alt="RetailSync" class="client-img">
+                        </div>
                         <h4>RetailSync</h4>
                         <p class="text-muted">Secured customer purchase history for cross-border analytics without exposing PII.</p>
                     </div>
@@ -296,7 +440,7 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <a class="navbar-brand mb-3 d-block" href="#">
-                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
                     </a>
                     <p class="text-muted">Empowering enterprises with cutting-edge data anonymization and privacy compliance solutions.</p>
                     <div class="d-flex gap-2 mt-4">

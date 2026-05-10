@@ -10,30 +10,92 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .hero-v2 {
-            height: 90vh;
-            background: linear-gradient(to bottom, #081120, #101a30);
+            height: 100vh;
+            min-height: 700px;
+            background: radial-gradient(circle at top right, #101a30, #081120);
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
         .data-stream {
             position: absolute;
             top: 0;
             right: 0;
-            width: 50%;
+            width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.05));
             mask-image: linear-gradient(to bottom, transparent, black, transparent);
+            pointer-events: none;
+        }
+        .hero-v2-image-container {
+            transform: scale(0.9);
+            transform-origin: center;
+        }
+        .hero-v2-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        @media (max-width: 991px) {
+            .hero-v2 {
+                padding-top: 150px !important;
+                text-align: center;
+                height: auto !important;
+                min-height: 100vh;
+            }
+            .hero-v2 .d-flex.flex-wrap {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 15px !important;
+            }
+            .hero-v2 .btn {
+                width: 100% !important;
+                max-width: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .hero-v2 .d-flex.align-items-center.gap-4 {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .hero-v2-image-container {
+                transform: none !important;
+            }
+
+            /* Risk Scorecard & Infrastructure Centering */
+            section.py-10 {
+                text-align: center !important;
+            }
+
+            section.py-10 .list-unstyled li {
+                justify-content: center !important;
+            }
+
+            section.py-10 .glass-card {
+                margin-bottom: 1rem;
+            }
+
+            section.py-10 .row.g-4 {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body class="dark-mode">
 
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -46,7 +108,6 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -66,15 +127,62 @@
 
     <header class="hero-v2">
         <div class="data-stream"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <span class="badge bg-info text-dark mb-3">v2.0 Enterprise Ready</span>
-                    <h1 class="display-2 mb-4">Engineering <span class="text-info">Trust</span> into Every Dataset</h1>
-                    <p class="lead text-muted mb-5">Automated privacy compliance and high-fidelity anonymization for the modern data stack.</p>
-                    <div class="d-flex gap-3">
-                        <button class="btn btn-premium">Start Free Trial</button>
-                        <button class="btn btn-outline-light">Watch Demo</button>
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal reveal-left">
+                    <div class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill mb-4 border border-info border-opacity-25">
+                        <i class="bi bi-cpu me-2"></i>v2.0 Enterprise Ready
+                    </div>
+                    <h1 class="display-2 mb-4 fw-bold">Engineering <span class="gradient-text">Trust</span> into Every Dataset</h1>
+                    <p class="lead text-muted mb-5 fs-4">Automated privacy compliance and high-fidelity anonymization for the modern data stack.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <button class="btn btn-premium px-4 py-3">Start Free Trial</button>
+                        <button class="btn btn-outline-premium px-4 py-3">Watch Demo</button>
+                    </div>
+                    
+                    <div class="d-flex align-items-center gap-4 text-muted small reveal reveal-up">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-shield-check text-info"></i> Soc2 Type II
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-shield-check text-info"></i> GDPR Ready
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-shield-check text-info"></i> HIPAA Compliant
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal reveal-right mt-5 mt-lg-0">
+                    <div class="position-relative hero-v2-image-container">
+                        <div class="hero-v2-glow"></div>
+                        <img src="assets/images/hero-v2.png" alt="Data Intelligence" class="img-fluid rounded-4 shadow-2xl pulse-image">
+                        
+                        <!-- Floating Cards -->
+                        <div class="glass-card position-absolute top-0 start-0 p-3 mt-n4 ms-n4 d-none d-md-block floating-card">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-primary rounded-circle p-2">
+                                    <i class="bi bi-lock-fill text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold small text-white">End-to-End</div>
+                                    <div class="text-muted smaller">Encryption</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card position-absolute bottom-0 end-0 p-3 mb-n4 me-n4 d-none d-md-block floating-card-alt">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-info rounded-circle p-2">
+                                    <i class="bi bi-lightning-fill text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold small text-white">10ms Latency</div>
+                                    <div class="text-muted smaller">Real-time Masking</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,21 +192,160 @@
     <section class="bg-secondary-bg py-5">
         <div class="container">
             <div class="row text-center g-4">
-                <div class="col-md-3">
-                    <h2 class="text-info">500+</h2>
-                    <p class="text-muted small">Enterprises Protected</p>
+                <div class="col-md-3 reveal reveal-up">
+                    <h2 class="text-info fw-bold">500+</h2>
+                    <p class="text-muted small mb-0">Enterprises Protected</p>
                 </div>
-                <div class="col-md-3">
-                    <h2 class="text-info">10PB+</h2>
-                    <p class="text-muted small">Data Anonymized</p>
+                <div class="col-md-3 reveal reveal-up" style="transition-delay: 0.1s;">
+                    <h2 class="text-info fw-bold">10PB+</h2>
+                    <p class="text-muted small mb-0">Data Anonymized</p>
                 </div>
-                <div class="col-md-3">
-                    <h2 class="text-info">Zero</h2>
-                    <p class="text-muted small">Compliance Fines</p>
+                <div class="col-md-3 reveal reveal-up" style="transition-delay: 0.2s;">
+                    <h2 class="text-info fw-bold">Zero</h2>
+                    <p class="text-muted small mb-0">Compliance Fines</p>
                 </div>
-                <div class="col-md-3">
-                    <h2 class="text-info">99.9%</h2>
-                    <p class="text-muted small">Data Utility</p>
+                <div class="col-md-3 reveal reveal-up" style="transition-delay: 0.3s;">
+                    <h2 class="text-info fw-bold">99.9%</h2>
+                    <p class="text-muted small mb-0">Data Utility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. AI-Powered Risk Scorecard -->
+    <section class="py-10">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal reveal-left">
+                    <h2 class="display-5 fw-bold mb-4">AI-Powered <span class="gradient-text">Risk Scorecard</span></h2>
+                    <p class="text-muted mb-5 fs-5">Identify vulnerabilities across your data ecosystem with real-time risk scores powered by advanced machine learning models.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="glass-card p-4 border-info border-opacity-25 h-100">
+                                <div class="text-info h3 mb-2"><i class="bi bi-cpu"></i></div>
+                                <h6 class="fw-bold">Dynamic Analysis</h6>
+                                <p class="small text-muted mb-0">Scanning 1M+ rows/sec</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="glass-card p-4 border-primary border-opacity-25 h-100">
+                                <div class="text-primary h3 mb-2"><i class="bi bi-shield-shaded"></i></div>
+                                <h6 class="fw-bold">Threat Defense</h6>
+                                <p class="small text-muted mb-0">Automated Remediation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal reveal-right ps-lg-5">
+                    <div class="position-relative">
+                        <div class="floating-glow"></div>
+                        <img src="assets/images/v2-risk.png" alt="Risk Dashboard" class="img-fluid rounded-4 shadow-2xl pulse-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. The Privacy Vault Architecture -->
+    <section class="bg-secondary-bg py-10">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 reveal reveal-left pe-lg-5 mt-5 mt-lg-0">
+                    <div class="glass-card p-0 overflow-hidden rounded-4 border-0 shadow-2xl">
+                        <img src="assets/images/v2-vault.png" alt="Privacy Vault" class="w-100 h-100 object-fit-cover hover-zoom">
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal reveal-right">
+                    <span class="text-info text-uppercase tracking-widest small fw-bold mb-3 d-block">Infrastructure</span>
+                    <h2 class="display-5 fw-bold mb-4">The Privacy <span class="text-info">Vault</span> Architecture</h2>
+                    <p class="text-muted mb-4 lead">Our patented "Clean Room" architecture ensures that sensitive data is processed in a secure, isolated environment without ever leaving your VPC.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle text-info me-3 h4 mb-0"></i> Zero-Knowledge Proofs</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle text-info me-3 h4 mb-0"></i> Encrypted Multi-Party Computation</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle text-info me-3 h4 mb-0"></i> Hardware-Level Isolation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Seamless Cloud Integrations -->
+    <section class="py-10">
+        <div class="container text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 reveal reveal-up">Seamless <span class="gradient-text">Cloud Integrations</span></h2>
+            <p class="text-muted mx-auto reveal reveal-up" style="max-width: 600px;">Deploy PrivacyIntel across your entire hybrid-cloud or multi-cloud infrastructure with a single click.</p>
+        </div>
+        <div class="container">
+            <div class="row g-5 align-items-center justify-content-center">
+                <div class="col-lg-4 order-1">
+                    <div class="glass-card p-4 mb-4 reveal reveal-left">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary"><i class="bi bi-cloud-check h3 mb-0"></i></div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">AWS Certified</h5>
+                                <p class="small text-muted mb-0">Native VPC Integration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 mb-4 reveal reveal-left" style="transition-delay: 0.1s;">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-info bg-opacity-10 p-3 rounded-circle text-info"><i class="bi bi-microsoft h3 mb-0"></i></div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">Azure Sentinel</h5>
+                                <p class="small text-muted mb-0">Integrated Threat Logic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 order-2 text-center reveal reveal-scale">
+                    <div class="position-relative">
+                        <div class="orbit-container">
+                            <img src="assets/images/v2-cloud.png" alt="Cloud Network" class="img-fluid rounded-circle shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 order-3">
+                    <div class="glass-card p-4 mb-4 reveal reveal-right">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-danger bg-opacity-10 p-3 rounded-circle text-danger"><i class="bi bi-google h3 mb-0"></i></div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">Google Cloud</h5>
+                                <p class="small text-muted mb-0">BigQuery Native Support</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 mb-4 reveal reveal-right" style="transition-delay: 0.1s;">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-warning bg-opacity-10 p-3 rounded-circle text-warning"><i class="bi bi-database-check h3 mb-0"></i></div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">Snowflake</h5>
+                                <p class="small text-muted mb-0">Data Clean Room Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Global Compliance Heatmap -->
+    <section class="bg-secondary-bg py-10 overflow-hidden">
+        <div class="container text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 reveal reveal-up">Global Compliance <span class="text-info">Heatmap</span></h2>
+            <p class="text-muted mx-auto reveal reveal-up" style="max-width: 600px;">Stay ahead of the world's most stringent privacy laws with automated monitoring and localization.</p>
+        </div>
+        <div class="container">
+            <div class="glass-card p-2 rounded-5 overflow-hidden reveal reveal-up">
+                <div class="position-relative">
+                    <img src="assets/images/v2-map.png" alt="Global Map" class="w-100 h-100 object-fit-cover rounded-4" style="min-height: 400px;">
+                    <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+                        <div class="d-flex justify-content-center gap-4 flex-wrap">
+                            <span class="badge bg-dark bg-opacity-75 border border-info px-4 py-2 rounded-pill reveal reveal-scale">GDPR Active</span>
+                            <span class="badge bg-dark bg-opacity-75 border border-primary px-4 py-2 rounded-pill reveal reveal-scale" style="transition-delay: 0.1s;">CCPA Compliant</span>
+                            <span class="badge bg-dark bg-opacity-75 border border-info px-4 py-2 rounded-pill reveal reveal-scale" style="transition-delay: 0.2s;">LGPD Certified</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,7 +366,7 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <a class="navbar-brand mb-3 d-block" href="#">
-                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
                     </a>
                     <p class="text-muted">Empowering enterprises with cutting-edge data anonymization and privacy compliance solutions.</p>
                     <div class="d-flex gap-2 mt-4">

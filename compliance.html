@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="dark-mode">
+<body class="dark-mode compliance-page">
 
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,6 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link active" href="compliance.html">Compliance</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -45,67 +44,132 @@
         </div>
     </nav>
 
-    <section class="mt-5 py-5">
+    <header class="compliance-hero py-10">
+        <div class="container text-center py-5">
+            <h1 class="display-4 reveal reveal-up">Regulatory <span class="text-info">Compliance</span> Frameworks</h1>
+            <p class="text-muted mx-auto reveal reveal-up" style="max-width: 600px; transition-delay: 0.1s;">We help you navigate the complex landscape of global data protection laws through engineering excellence and legal precision.</p>
+        </div>
+    </header>
+
+    <!-- 1. The Compliance Roadmap (Step-by-Step Layout) -->
+    <section class="py-10 bg-secondary-bg">
         <div class="container">
-            <h1 class="text-center mb-5">Global Compliance <span class="text-info">Frameworks</span></h1>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-card text-center h-100">
-                        <div class="h1 text-info mb-3">GDPR</div>
-                        <p class="small text-muted">General Data Protection Regulation (EU)</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal reveal-left">
+                    <h2 class="display-5 fw-bold mb-4">The Compliance <span class="text-info">Roadmap</span></h2>
+                    <p class="text-muted mb-5">Our systematic approach takes your organization from initial assessment to full regulatory certification in three distinct phases.</p>
+                    
+                    <div class="compliance-steps">
+                        <div class="d-flex gap-4 mb-4 reveal reveal-up" style="transition-delay: 0.1s;">
+                            <div class="step-number h3 text-info fw-bold mb-0">01</div>
+                            <div>
+                                <h5 class="fw-bold">Gap Analysis</h5>
+                                <p class="small text-muted mb-0">Identifying where your current data handling processes fall short of regulatory requirements.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-4 mb-4 reveal reveal-up" style="transition-delay: 0.2s;">
+                            <div class="step-number h3 text-primary fw-bold mb-0">02</div>
+                            <div>
+                                <h5 class="fw-bold">Engineering Implementation</h5>
+                                <p class="small text-muted mb-0">Deploying our anonymization and masking tools to remediate identified privacy gaps.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-4 mb-0 reveal reveal-up" style="transition-delay: 0.3s;">
+                            <div class="step-number h3 text-success fw-bold mb-0">03</div>
+                            <div>
+                                <h5 class="fw-bold">Final Certification</h5>
+                                <p class="small text-muted mb-0">Conducting the final audit and providing the legal documentation for full compliance.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-card text-center h-100">
-                        <div class="h1 text-info mb-3">CCPA</div>
-                        <p class="small text-muted">California Consumer Privacy Act (USA)</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-card text-center h-100">
-                        <div class="h1 text-info mb-3">HIPAA</div>
-                        <p class="small text-muted">Health Insurance Portability Act (Healthcare)</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="glass-card text-center h-100">
-                        <div class="h1 text-info mb-3">LGPD</div>
-                        <p class="small text-muted">Lei Geral de Proteção de Dados (Brazil)</p>
+                <div class="col-lg-6 mt-5 mt-lg-0 reveal reveal-right">
+                    <div class="position-relative ps-lg-5">
+                        <img src="assets/images/c-roadmap.png" alt="Compliance Roadmap" class="img-fluid rounded-4 shadow-2xl">
+                        <div class="glass-card position-absolute top-50 start-0 translate-middle-x p-3 d-none d-xl-block floating-card">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-shield-check text-success"></i>
+                                <span class="small fw-bold">Verified Path</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="mt-5">
-                <div class="glass-card">
-                    <h3>Compliance Roadmap</h3>
-                    <p class="text-muted">Our structured approach to achieving and maintaining compliance across all jurisdictions.</p>
-                    <div class="table-responsive mt-4">
-                        <table class="table table-dark border-secondary">
-                            <thead>
-                                <tr>
-                                    <th>Phase</th>
-                                    <th>Objective</th>
-                                    <th>Duration</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Gap Analysis</td>
-                                    <td>Identifying current compliance deficiencies.</td>
-                                    <td>2-4 Weeks</td>
-                                </tr>
-                                <tr>
-                                    <td>Remediation</td>
-                                    <td>Implementing technical and organizational measures.</td>
-                                    <td>3-6 Months</td>
-                                </tr>
-                                <tr>
-                                    <td>Audit & Cert</td>
-                                    <td>Final review and formal certification assistance.</td>
-                                    <td>1 Month</td>
-                                </tr>
-                            </tbody>
-                        </table>
+    <!-- 2. Multi-Jurisdiction Support (Grid Layout) -->
+    <section class="py-10 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 reveal reveal-left mt-5 mt-lg-0">
+                    <div class="position-relative">
+                        <div class="hero-v2-glow"></div>
+                        <img src="assets/images/c-global.png" alt="Global Support" class="img-fluid rounded-4 shadow-2xl pulse-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5 reveal reveal-right">
+                    <h2 class="display-5 fw-bold mb-4">Multi-Jurisdiction <span class="gradient-text">Expertise</span></h2>
+                    <p class="text-muted mb-5">Privacy is not one-size-fits-all. We provide specialized modules for the world's most stringent data protection frameworks.</p>
+                    
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100 hover-lift">
+                                <h6 class="fw-bold text-info"><i class="bi bi-globe me-2"></i>GDPR (Europe)</h6>
+                                <p class="smaller text-muted mb-0">Managing consent, SARs, and cross-border data transfers.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100 hover-lift">
+                                <h6 class="fw-bold text-info"><i class="bi bi-geo-alt me-2"></i>CCPA (USA)</h6>
+                                <p class="smaller text-muted mb-0">Automating opt-out requests and data inventory management.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100 hover-lift">
+                                <h6 class="fw-bold text-info"><i class="bi bi-hospital me-2"></i>HIPAA (Health)</h6>
+                                <p class="smaller text-muted mb-0">Specialized de-identification for PHI and clinical research data.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 h-100 hover-lift">
+                                <h6 class="fw-bold text-info"><i class="bi bi-bank me-2"></i>LGPD & More</h6>
+                                <p class="smaller text-muted mb-0">Flexible frameworks for emerging laws in Brazil, India, and beyond.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Real-time Compliance Monitoring (Featured Layout) -->
+    <section class="py-10 bg-secondary-bg">
+        <div class="container">
+            <div class="glass-card p-0 rounded-5 overflow-hidden border-0 shadow-2xl reveal reveal-scale">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-7">
+                        <img src="assets/images/c-monitor.png" alt="Monitoring Dashboard" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-5 p-5">
+                        <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill mb-4 border border-success border-opacity-25">
+                            <i class="bi bi-activity me-2"></i>Live Monitoring
+                        </span>
+                        <h2 class="display-6 fw-bold mb-4">Continuous <span class="text-info">Verification</span></h2>
+                        <p class="text-muted mb-4">Our platform doesn't just get you compliant—it keeps you compliant. We provide real-time alerts if any data transformation process deviates from your defined privacy policy.</p>
+                        
+                        <div class="d-flex align-items-center gap-4 mb-4">
+                            <div class="bg-dark p-3 rounded-4">
+                                <div class="h3 fw-bold text-info mb-0">99.9%</div>
+                                <div class="smaller text-muted">Audit Readiness</div>
+                            </div>
+                            <div class="bg-dark p-3 rounded-4">
+                                <div class="h3 fw-bold text-info mb-0">Instant</div>
+                                <div class="smaller text-muted">Violation Alerts</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-premium">Request Compliance Demo</button>
                     </div>
                 </div>
             </div>
@@ -117,7 +181,7 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <a class="navbar-brand mb-3 d-block" href="#">
-                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
                     </a>
                     <p class="text-muted">Empowering enterprises with cutting-edge data anonymization and privacy compliance solutions.</p>
                     <div class="d-flex gap-2 mt-4">

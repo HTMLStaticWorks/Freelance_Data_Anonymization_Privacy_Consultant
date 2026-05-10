@@ -177,6 +177,15 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-base);
 }
 
+.navbar-toggler-icon {
+    filter: invert(1) brightness(100);
+}
+
+body.light-mode .navbar-toggler-icon {
+    filter: none;
+}
+
+
 .navbar-brand {
     font-family: var(--font-heading);
     font-weight: 800;
@@ -317,6 +326,7 @@ h1, h2, h3, h4, h5, h6 {
 .gradient-text {
     background: linear-gradient(135deg, var(--frost-blue), var(--electric-lavender));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -354,6 +364,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.8rem !important;
     border-radius: 12px !important;
     max-width: 180px;
+    height: fit-content !important;
+    min-height: auto !important;
 }
 
 .floating-card-alt {
@@ -362,6 +374,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.8rem !important;
     border-radius: 12px !important;
     max-width: 180px;
+    height: fit-content !important;
+    min-height: auto !important;
 }
 
 @keyframes floating-up-down {
@@ -433,6 +447,14 @@ footer a:hover {
     text-decoration: none;
 }
 
+.social-icon:hover {
+    background: var(--midnight-cyan);
+    color: var(--primary-bg) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+    border-color: var(--midnight-cyan);
+}
+
 /* Dashboard D Icon */
 .nav-dashboard-dot {
     width: 32px;
@@ -498,10 +520,6 @@ footer a:hover {
     left: 30px;
 }
 
-/* Dark Mode Transitions */
-body.dark-mode {
-    /* Dark mode is default, but we can add overrides here if needed */
-}
 
 /* Responsive Overrides */
 @media (max-width: 991px) {
@@ -663,6 +681,67 @@ body.dark-mode {
     body.light-mode .message-sent {
         color: white !important;
     }
+
+    /* Hero Mobile Fixes */
+    .about-hero {
+        padding-top: 140px !important;
+        padding-bottom: 80px !important;
+        text-align: center;
+        height: auto !important;
+        min-height: unset !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .about-hero .container {
+        transform: none !important;
+    }
+
+    .about-hero .d-flex.align-items-center.gap-3,
+    .about-hero .d-flex.align-items-center.gap-2 {
+        justify-content: center !important;
+    }
+
+    /* Ensure all contents are visible by overriding potential reveal issues on mobile */
+    .about-hero .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+    .hero-section {
+        padding-top: 150px !important;
+        height: auto !important;
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    .hero-section .container {
+        transform: none !important;
+    }
+
+    .hero-section .d-flex.flex-wrap {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .hero-section .btn {
+        width: 100% !important;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Scroll Animations */
@@ -788,6 +867,145 @@ body.light-mode .message-received {
     transform: scale(1.1);
 }
 
+/* Unique Section 1: Compliance Parallax */
+.compliance-parallax-section {
+    position: relative;
+    overflow: hidden;
+    background: var(--secondary-bg);
+}
+
+.parallax-img-container {
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-img-container img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    transform: translateY(-10%);
+    transition: transform 0.5s ease-out;
+}
+
+.compliance-parallax-section:hover .parallax-img-container img {
+    transform: translateY(0);
+}
+
+.compliance-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
+.compliance-item:hover {
+    background: rgba(6, 182, 212, 0.1);
+    border-color: var(--midnight-cyan);
+    transform: translateX(10px);
+}
+
+/* Unique Section 2: Risk Methodology Flip Cards */
+.risk-card-container {
+    perspective: 1000px;
+}
+
+.risk-flip-card {
+    height: 350px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
+}
+
+.risk-flip-card:hover {
+    transform: rotateY(180deg);
+}
+
+.risk-card-front, .risk-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid var(--glass-border);
+}
+
+.risk-card-front {
+    background: var(--glass-bg);
+}
+
+.risk-card-back {
+    background: linear-gradient(135deg, var(--midnight-cyan), var(--electric-lavender));
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Unique Section 3: Bento Box Grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 1.5rem;
+}
+
+.bento-item {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bento-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+    transition: var(--transition-base);
+}
+
+.bento-item:hover img {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+.bento-item:hover {
+    transform: scale(1.02);
+    border-color: var(--midnight-cyan);
+    box-shadow: 0 20px 40px var(--glow-effect);
+}
+
+.bento-1 { grid-column: span 2; grid-row: span 2; }
+.bento-2 { grid-column: span 2; }
+.bento-3 { grid-column: span 1; }
+.bento-4 { grid-column: span 1; }
+
+@media (max-width: 991px) {
+    .bento-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+    .bento-1, .bento-2, .bento-3, .bento-4 { grid-column: span 1; grid-row: span 1; }
+}
 .workflow-card .h2 {
     transition: var(--transition-base);
 }
@@ -844,4 +1062,220 @@ body.light-mode .message-received {
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: var(--text-muted);
+}
+
+/* Home v2 Unique Styles */
+.py-10 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.hover-zoom {
+    transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+.floating-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+    z-index: -1;
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(20px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
+}
+
+.orbit-container {
+    animation: orbit 10s linear infinite;
+}
+
+.tracking-widest {
+    letter-spacing: 0.2em;
+}
+
+/* About Page Hero */
+.about-hero {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    background: radial-gradient(circle at bottom left, #081120, #101a30);
+}
+
+/* Services Page Enhancements */
+.service-card-img {
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--glass-border);
+    transition: var(--transition-base);
+}
+
+.glass-card:hover .service-card-img {
+    transform: scale(1.05);
+}
+
+/* Data Masking Section Fixes & Animations */
+.masking-code-block {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--glass-border);
+    border-left: 3px solid var(--midnight-cyan);
+    transition: var(--transition-base);
+    color: var(--text-primary);
+}
+
+body.light-mode .masking-code-block {
+    background: #f1f5f9;
+    color: #1e293b;
+    border-left-color: var(--midnight-cyan);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.scanning-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.scanning-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(6, 182, 212, 0.1),
+        var(--midnight-cyan),
+        rgba(6, 182, 212, 0.1),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.scanning-card:hover::before {
+    opacity: 1;
+    animation: scanning-line 2s infinite linear;
+}
+
+@keyframes scanning-line {
+    0% { top: 0%; }
+    100% { top: 100%; }
+}
+
+/* Floating bits animation for masking section background */
+.masking-section {
+    position: relative;
+    z-index: 1;
+}
+
+.masking-section::before {
+    content: '01010110';
+    position: absolute;
+    font-family: monospace;
+    font-size: 10rem;
+    color: var(--midnight-cyan);
+    opacity: 0.03;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Client Success Image Styles */
+.client-img-wrapper {
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--glass-border);
+    position: relative;
+    background: var(--secondary-bg);
+}
+
+.client-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 40%, rgba(8, 17, 32, 0.6));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.client-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-base);
+    filter: brightness(0.7) saturate(0.8);
+    background: #000;
+}
+
+.glass-card:hover .client-img {
+    transform: scale(1.1);
+    filter: brightness(1.1) saturate(1);
+}
+
+/* Scanning effect for client images */
+.glass-card:hover .client-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--midnight-cyan);
+    box-shadow: 0 0 15px var(--midnight-cyan);
+    z-index: 10;
+    animation: scanning-line 3s infinite linear;
+    pointer-events: none;
+}
+
+.glass-card h4 {
+    margin-bottom: 1rem;
+    color: var(--frost-blue);
+}
+
+
+/* Link Hover Highlights for Auth Pages */
+.hover-highlight {
+    transition: var(--transition-base);
+}
+
+.hover-highlight:hover {
+    color: var(--frost-blue) !important;
+    text-shadow: 0 0 10px rgba(103, 232, 249, 0.4);
+    text-decoration: underline !important;
+}
+
+/* General hover highlight for all links in auth pages */
+.auth-page a:not(.btn):not(.navbar-brand):hover {
+    color: var(--frost-blue) !important;
+    text-shadow: 0 0 8px rgba(103, 232, 249, 0.4);
+}
+
+/* Fix for dark mode dropdown menu options visibility */
+.dark-mode select.form-select option,
+.dark-mode .form-select option {
+    background-color: #101a30; /* Matches --secondary-bg */
+    color: #f8fafc; /* Matches --text-primary */
 }

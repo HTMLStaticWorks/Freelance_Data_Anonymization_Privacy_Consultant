@@ -72,24 +72,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar-custom');
     
     // Back to Top Injection
-    const backToTop = document.createElement('button');
-    backToTop.id = 'back-to-top';
-    backToTop.innerHTML = '<i class="bi bi-arrow-up"></i>';
-    document.body.appendChild(backToTop);
+    const isAuthPage = document.body.classList.contains('auth-page');
+    let backToTop = null;
+
+    if (!isAuthPage) {
+        backToTop = document.createElement('button');
+        backToTop.id = 'back-to-top';
+        backToTop.innerHTML = '<i class="bi bi-arrow-up"></i>';
+        document.body.appendChild(backToTop);
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     window.addEventListener('scroll', () => {
         // Navbar Scrolled Class
         if (window.scrollY > 50) {
             if(navbar) navbar.classList.add('navbar-scrolled');
-            backToTop.style.display = 'flex';
+            if(backToTop) backToTop.style.display = 'flex';
         } else {
             if(navbar) navbar.classList.remove('navbar-scrolled');
-            backToTop.style.display = 'none';
+            if(backToTop) backToTop.style.display = 'none';
         }
-    });
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     // Mobile Menu Close on link click

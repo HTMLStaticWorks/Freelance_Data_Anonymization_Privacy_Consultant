@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | PrivacyIntel</title>
+    <title>Enterprise Security Portfolio | PrivacyIntel</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="dark-mode">
+<body class="dark-mode portfolio-page">
 
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,6 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="compliance.html">Compliance</a></li>
                     <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -45,34 +44,108 @@
         </div>
     </nav>
 
-    <section class="mt-5 py-5 text-center">
+    <header class="portfolio-hero py-10">
+        <div class="container text-center py-5">
+            <h1 class="display-4 reveal reveal-up">Enterprise <span class="text-info">Security</span> Portfolio</h1>
+            <p class="text-muted mx-auto reveal reveal-up" style="max-width: 600px; transition-delay: 0.1s;">A showcase of our most complex privacy engineering implementations and regulatory compliance successes.</p>
+        </div>
+    </header>
+
+    <!-- 1. The Secure Data Vault (Split Layout) -->
+    <section class="py-10 bg-secondary-bg">
         <div class="container">
-            <h1 class="display-4">Compliance <span class="text-info">Case Studies</span></h1>
-            <p class="text-muted mx-auto" style="max-width: 600px;">Real-world examples of how we've helped enterprises secure their data and meet global privacy standards.</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal reveal-left">
+                    <span class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill mb-4 border border-info border-opacity-25">
+                        <i class="bi bi-bank me-2"></i>FinTech Case Study
+                    </span>
+                    <h2 class="display-5 fw-bold mb-4">The Secure <span class="text-info">Data Vault</span></h2>
+                    <p class="text-muted mb-4">For a Tier-1 International Bank, we implemented a centralized privacy vault that anonymizes PII in real-time before it hits the analytics data lake.</p>
+                    <ul class="list-unstyled mb-5">
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-shield-lock text-info me-3"></i> Zero-Knowledge Architecture</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-shield-lock text-info me-3"></i> 99.99% Utility Retention</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="bi bi-shield-lock text-info me-3"></i> Sub-millisecond Latency</li>
+                    </ul>
+                    <button class="btn btn-premium">Read Full Case Study</button>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 reveal reveal-right">
+                    <div class="position-relative ps-lg-5">
+                        <div class="hero-v2-glow"></div>
+                        <img src="assets/images/p-vault.png" alt="Secure Vault" class="img-fluid rounded-4 shadow-2xl pulse-image">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="pt-0">
+    <!-- 2. Regulatory Success Stories (Grid Layout) -->
+    <section class="py-10">
         <div class="container">
+            <div class="text-center mb-5 reveal reveal-up">
+                <h2 class="display-5 fw-bold">Regulatory <span class="text-info">Success</span> Stories</h2>
+                <p class="text-muted">Proven track record in navigating the world's most stringent privacy laws.</p>
+            </div>
             <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="glass-card p-0 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" class="img-fluid w-100" alt="FinTech">
-                        <div class="p-4">
-                            <h4>Global FinTech Anonymization</h4>
-                            <p class="text-muted small">Implementing differential privacy for a multi-national banking client to enable secure cross-border analytics.</p>
-                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-info">View Details</a>
+                <div class="col-lg-7 reveal reveal-left">
+                    <div class="glass-card p-0 rounded-5 overflow-hidden border-0 shadow-2xl h-100">
+                        <img src="assets/images/p-success.png" alt="Compliance Achievement" class="w-100 h-100 object-fit-cover">
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal reveal-right">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="glass-card p-4 hover-lift">
+                            <h5 class="fw-bold text-info">Global Retail Giant</h5>
+                            <p class="small text-muted mb-3">Achieved 100% GDPR compliance across 12 EU jurisdictions in under 6 months.</p>
+                            <span class="badge bg-success small">Certified GDPR</span>
+                        </div>
+                        <div class="glass-card p-4 hover-lift">
+                            <h5 class="fw-bold text-info">Healthcare SaaS</h5>
+                            <p class="small text-muted mb-3">Implemented HIPAA-compliant de-identification for medical research data.</p>
+                            <span class="badge bg-primary small">HIPAA Verified</span>
+                        </div>
+                        <div class="glass-card p-4 hover-lift">
+                            <h5 class="fw-bold text-info">Social Media Platform</h5>
+                            <p class="small text-muted mb-3">Automated CCPA data deletion requests for over 50 million users.</p>
+                            <span class="badge bg-info small">CCPA Optimized</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-0 overflow-hidden h-100">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800" class="img-fluid w-100" alt="Healthcare">
-                        <div class="p-4">
-                            <h4>Healthcare Data Compliance</h4>
-                            <p class="text-muted small">Redesigning data workflows for a health research group to meet HIPAA and GDPR requirements.</p>
-                            <a href="portfolio-details.html" class="btn btn-sm btn-outline-info">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Risk Assessment Analytics (Featured Layout) -->
+    <section class="py-10 bg-secondary-bg">
+        <div class="container">
+            <div class="glass-card p-0 rounded-5 overflow-hidden border-0 shadow-2xl reveal reveal-scale">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-7">
+                        <img src="assets/images/p-analytics.png" alt="Risk Analytics" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-5 p-5">
+                        <h2 class="display-6 fw-bold mb-4">Risk Assessment <span class="text-info">Methodology</span></h2>
+                        <p class="text-muted mb-4">Our proprietary "Privacy-Score" algorithm quantifies re-identification risk across multi-source datasets with mathematical precision.</p>
+                        
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small fw-bold">k-Anonymity Verification</span>
+                                <span class="small text-info">98% Success Rate</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 6px;">
+                                <div class="progress-bar bg-info" style="width: 98%;"></div>
+                            </div>
                         </div>
+                        <div class="mb-5">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small fw-bold">Differential Privacy Epsilon</span>
+                                <span class="small text-info">0.1 (Max Security)</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 6px;">
+                                <div class="progress-bar bg-primary" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-premium w-100">View Methodology Whitepaper</button>
                     </div>
                 </div>
             </div>
@@ -84,7 +157,7 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4">
                     <a class="navbar-brand mb-3 d-block" href="#">
-                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span>INTEL</span>
+                        <i class="bi bi-shield-lock-fill me-2 text-info"></i>PRIVACY<span class="text-info">INTEL</span>
                     </a>
                     <p class="text-muted">Empowering enterprises with cutting-edge data anonymization and privacy compliance solutions.</p>
                     <div class="d-flex gap-2 mt-4">
