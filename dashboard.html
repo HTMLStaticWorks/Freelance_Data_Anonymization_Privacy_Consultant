@@ -21,10 +21,13 @@
     <div class="dashboard-wrapper">
         <!-- Sidebar -->
         <aside class="sidebar">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <button class="btn btn-close-sidebar d-lg-none" id="sidebar-close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <a class="navbar-brand d-flex align-items-center mb-5" href="index.html">
                 <img src="assets/images/logo.svg" alt="PrivacyIntel Logo" class="me-2" style="width: 28px; height: 28px;">PRIVACY<span class="text-info">INTEL</span>
             </a>
-            <nav class="sidebar-nav">
+            <nav class="sidebar-nav mt-4">
                 <a href="#" class="sidebar-link active" data-section="overview">
                     <i class="bi bi-grid-1x2-fill"></i> Dashboard Overview
                 </a>
@@ -393,7 +396,7 @@
                 <div class="glass-card p-0 overflow-hidden chat-container">
                     <div class="row g-0 h-100">
                         <!-- Contacts Sidebar -->
-                        <div class="col-md-4 border-end border-secondary d-flex flex-column h-100">
+                        <div class="col-md-4 chat-sidebar-border d-flex flex-column h-100">
                             <div class="p-3 border-bottom border-secondary bg-glass-light">
                                 <h5 class="mb-0">Messages</h5>
                             </div>
@@ -462,7 +465,7 @@
                             <div class="p-3 border-top border-secondary chat-header">
                                 <div class="input-group">
                                     <button class="btn btn-outline-secondary"><i class="bi bi-paperclip"></i></button>
-                                    <input type="text" class="form-control bg-dark border-secondary text-white mx-2" placeholder="Write a message...">
+                                    <input type="text" class="form-control mx-2" placeholder="Write a message...">
                                     <button class="btn btn-premium px-4"><i class="bi bi-send-fill"></i></button>
                                 </div>
                             </div>
@@ -481,15 +484,15 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label class="form-label small text-muted">Full Name</label>
-                                        <input type="text" class="form-control bg-dark border-secondary text-white" value="John Doe">
+                                        <input type="text" class="form-control" value="John Doe">
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label small text-muted">Email</label>
-                                        <input type="email" class="form-control bg-dark border-secondary text-white" value="john@enterprise.com">
+                                        <input type="email" class="form-control" value="john@enterprise.com">
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label small text-muted">Organization</label>
-                                        <input type="text" class="form-control bg-dark border-secondary text-white" value="PrivacyIntel Global">
+                                        <input type="text" class="form-control" value="PrivacyIntel Global">
                                     </div>
                                 </div>
                                 <button class="btn btn-premium mt-4">Save Changes</button>

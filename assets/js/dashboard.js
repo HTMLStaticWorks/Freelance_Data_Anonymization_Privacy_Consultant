@@ -33,9 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sidebar Toggle for Mobile
     const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const sidebar = document.querySelector('.sidebar');
+
     if (sidebarToggle) {
         sidebarToggle.addEventListener('click', () => {
-            document.querySelector('.sidebar').classList.toggle('show');
+            sidebar.classList.add('show');
+        });
+    }
+
+    if (sidebarClose) {
+        sidebarClose.addEventListener('click', () => {
+            sidebar.classList.remove('show');
         });
     }
 

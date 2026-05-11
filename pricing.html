@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <style>
+        @media (max-width: 991px) {
+            .pricing-page .glass-card ul.list-unstyled {
+                display: inline-block;
+                text-align: left;
+                width: 100%;
+                max-width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        body.light-mode .form-range::-webkit-slider-runnable-track {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        body.light-mode .form-range::-moz-range-track {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body class="dark-mode pricing-page">
 
@@ -45,11 +64,15 @@
         </div>
     </nav>
 
-    <section class="pricing-hero mt-5 py-5 text-center">
-        <div class="container">
+    <header class="page-hero pb-0">
+        <div class="container text-center py-4">
             <h1 class="display-4">Enterprise <span class="text-info">Pricing</span></h1>
-            <p class="text-muted mx-auto mb-5" style="max-width: 600px;">Scalable privacy solutions for every stage of your data journey.</p>
-            
+            <p class="text-muted mx-auto" style="max-width: 600px;">Scalable privacy solutions for every stage of your data journey.</p>
+        </div>
+    </header>
+
+    <section class="py-10 pt-5 text-center">
+        <div class="container">
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-4">
                     <div class="glass-card h-100">
@@ -250,7 +273,7 @@
                     <h5 class="mb-4">Newsletter</h5>
                     <p class="text-muted small">Stay updated with the latest in privacy engineering.</p>
                     <div class="input-group">
-                        <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <input type="email" class="form-control" placeholder="Email address">
                         <button class="btn btn-premium" type="button">Subscribe</button>
                     </div>
                 </div>

@@ -1,0 +1,13 @@
+/* Fix for dark mode dropdown menu options visibility */
+.dark-mode select.form-select option,
+.dark-mode .form-select option {
+    background-color: #101a30; /* Matches --secondary-bg */
+    color: #f8fafc; /* Matches --text-primary */
+}
+
+/* Fix for light mode dropdown menu options visibility */
+body.light-mode select.form-select option,
+body.light-mode .form-select option {
+    background-color: #ffffff;
+    color: #0f172a;
+}
