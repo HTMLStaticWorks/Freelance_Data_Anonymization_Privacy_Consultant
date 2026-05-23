@@ -1528,8 +1528,7 @@ p, .lead, .subheading, .text-muted {
     color: var(--midnight-cyan) !important;
 }
 .bg-primary {
-    background-color: var(--midnight-cyan) !important;
-    color: #fff !important;
+    background-color: rgba(6, 182, 212, var(--bs-bg-opacity, 1)) !important;
 }
 .btn-primary {
     background-color: var(--midnight-cyan) !important;
@@ -1559,8 +1558,7 @@ p, .lead, .subheading, .text-muted {
     color: var(--electric-lavender) !important;
 }
 .bg-secondary {
-    background-color: var(--electric-lavender) !important;
-    color: #fff !important;
+    background-color: rgba(168, 85, 247, var(--bs-bg-opacity, 1)) !important;
 }
 .btn-secondary {
     background-color: var(--electric-lavender) !important;
