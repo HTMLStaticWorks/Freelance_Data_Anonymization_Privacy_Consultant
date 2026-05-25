@@ -405,6 +405,7 @@ body.light-mode .hero-section .hero-overlay {
     z-index: -1;
     opacity: 0.4;
     animation: float-orb 15s infinite alternate ease-in-out;
+    pointer-events: none;
 }
 
 .orb-1 {
